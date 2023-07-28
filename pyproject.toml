@@ -1,0 +1,38 @@
+# NOTE: This ``pyproject.toml`` configuration file uses Flit as the build backend. Read more about
+# this here: https://flit.pypa.io/en/stable/pyproject_toml.html
+
+[build-system]
+requires = ['flit_core>=3.2,<4']
+build-backend = 'flit_core.buildapi'
+
+[tool.flit.module]
+name = 'rps'  # the import name of the package
+
+
+[project]
+name='rps' #installation name of the package
+description='A two player game for childern'
+readme = {file = 'README.md', content-type = 'text/markdown'}
+maintainers = [{name = 'michaelkeller21',Tylermanley email = 'michaelkeller617@gmail.com', 'tylermanley99@gmail.com'}]
+keywords = []
+requires-python = '>=3'
+dynamic = ['version']
+dependencies = [
+    'numpy',
+]
+
+[project.optional-dependencies]
+dev = [
+    'flake8',
+    'flake8-annotations',
+    'flake8-docstrings',
+    'flake8-import-order',
+    'pip-tools',
+    'pytest',
+    'pytest-cov', 
+]
+
+all = ['rps[dev]']
+
+[project.urls]
+Repository = 'https://github.com/Tylermanley/rock-paper-scissors/'
